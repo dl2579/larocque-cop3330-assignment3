@@ -1,0 +1,18 @@
+@startuml
+class Employee{
+    #firstName: string
+    #lastName: string
+    #salary: int
+}
+
+class App {
+    +void main()
+}
+
+class recordProcessor {
+    +empArrL: ArrayList<Employee>
+    +recordProcessor(File file)
+    +String getRecordTable()
+}
+
+@enduml

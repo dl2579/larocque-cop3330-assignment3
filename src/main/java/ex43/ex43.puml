@@ -1,0 +1,10 @@
+@startuml
+class App {
+    +void main()
+}
+
+class websiteGenerator {
+    +websiteGenerator(String webName, String author, Boolean js, Boolean css)
+}
+
+@enduml
