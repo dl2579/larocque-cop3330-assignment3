@@ -44,9 +44,8 @@ public class App {
     {
         File file = new File("src/main/java/ex41/exercise41_input.txt");
 
-        nameSorter ns = new nameSorter();
-        ArrayList<String> nameArr = ns.readInput(file);
-        ns.sortAndPrint(nameArr);
+        ArrayList<String> nameArr = nameSorter.readInput(file);
+        nameSorter.sortAndPrint(nameArr);
 
     }
 }

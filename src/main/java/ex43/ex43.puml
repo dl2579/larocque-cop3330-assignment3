@@ -4,6 +4,7 @@ class App {
 }
 
 class websiteGenerator {
+    +webFolderName: String
     +websiteGenerator(String webName, String author, Boolean js, Boolean css)
 }
 

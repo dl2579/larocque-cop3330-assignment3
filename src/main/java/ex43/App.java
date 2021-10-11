@@ -8,12 +8,20 @@ import java.util.Scanner;
 public class App {
 
     public static class websiteGenerator{
+        File websiteDirectory;
 
-        websiteGenerator(String webName, String author, Boolean js, Boolean css){
-            new File("src/main/java/ex43/website").mkdirs();
+        websiteGenerator(File websiteDirectory){
+            this.websiteDirectory = websiteDirectory;
+            new File(websiteDirectory.getPath()).mkdirs();
+        }
+
+        public void generateWebsite(String webName, String author, Boolean js, Boolean css){
+            File websiteFolder = new File(websiteDirectory.getPath() + "/" + webName);
+            websiteFolder.mkdirs();
+            System.out.println("Created " + websiteFolder.getPath());
 
             try {
-                FileWriter myWriter = new FileWriter("src/main/java/ex43/website/index.html");
+                FileWriter myWriter = new FileWriter(websiteFolder.getPath() + "/index.html");
                 myWriter.write("<!DOCTYPE html>\n<html>\n<head>\n");
                 String titleTag = String.format("    <title>%s</title>\n", webName);
                 myWriter.write(titleTag);
@@ -24,6 +32,7 @@ public class App {
                 myWriter.write("<head>\n<body>\n\n<h1>This is a heading</h1>\n<p>This is a paragraph.</p>\n\n</body>\n</html>");
 
                 myWriter.close();
+                System.out.println("Created " + websiteFolder.getPath() + "/index.html");
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -31,11 +40,13 @@ public class App {
             }
 
             if(js){
-                new File("src/main/java/ex43/website/js").mkdirs();
+                new File(websiteFolder.getPath()+ "/js").mkdirs();
+                System.out.println("Created " + websiteFolder.getPath() + "/js");
             }
 
             if(css){
-                new File("src/main/java/ex43/website/css").mkdirs();
+                new File(websiteFolder.getPath() + "/css").mkdirs();
+                System.out.println("Created " + websiteFolder.getPath() + "/css");
             }
         }
     }
@@ -91,7 +102,9 @@ public class App {
             css = true;
         }
 
-        websiteGenerator wg = new websiteGenerator(name, author, js, css);
+        File websiteDirectory = new File("src/main/java/ex43/website/");
+        websiteGenerator wg = new websiteGenerator(websiteDirectory);
+        wg.generateWebsite(name, author, js, css);
 
     }
 }
