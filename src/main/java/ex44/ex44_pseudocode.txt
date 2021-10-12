@@ -1,0 +1,9 @@
+This program reads a json file and does a search based on the data contained in the json
+
+Create product class with fields of name,price,quantity
+Create class productInventory containing an array of products
+Use jsonReader to read json file
+Use gson to create object from json file of type productInventory
+use infinite while loop to keep asking user for product
+Loop through all products in product array generated from json to see if user specified product is found
+If found print the three data fields and break while loop

@@ -1,0 +1,26 @@
+This program generates a website skeleton.
+
+class websiteGenerator{
+    websiteGenerator(file){
+        constructor takes in directory where website skeleton will be created
+    }
+
+    generateWebsite(String webName, String author, Boolean js, Boolean css){
+        Use FileIO to create website folder using webName
+        Use FileWriter to create file
+        Use FileWrite to write html fields: include webName in title field, author in author field
+        if js = true:
+            create js folder using FileIO
+        if cs = true:
+            create cs folder using FileIO
+    }
+
+}
+
+In main function
+    Use FileIo to grab file at path of input
+    Prompt user for website name
+    Ask user if include js folder
+    Ask user if include css folder
+    create websiteGenerator object and pass file
+    websiteGenerator.generateWebsite

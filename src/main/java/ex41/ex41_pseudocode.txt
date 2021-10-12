@@ -1,0 +1,11 @@
+This program sorts the contents of a text file alphabetically.
+
+    Scan the text file line by line and read as string.
+    loop through all lines and add each line(string) to an array list of strings
+    return the array list of string
+    Use collections sort to sort the array of strings. This sorts each name alphabetically
+    Print the table heading, using ArrayList.size() to get the number of elements
+    Loop through each string of the sorted array and print to console
+    Use FileIO and directory of input file to create file object.
+    Use readInput function on the file to create arraylist of content (strings)
+    Use sort and print function

@@ -15,4 +15,7 @@ class recordProcessor {
     +String getRecordTable()
 }
 
+App *- Employee
+App *- recordProcessor
+
 @enduml

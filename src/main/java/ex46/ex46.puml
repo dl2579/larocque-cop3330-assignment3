@@ -1,0 +1,13 @@
+@startuml
+class App {
+    +void main()
+}
+
+class wordFreqFinder{
+    +tmap : TreeMap<String, Integer>()
+    +void findFrequency(File inputFile)
+    +String constructHistogram()
+}
+
+App *- wordFreqFinder
+@enduml

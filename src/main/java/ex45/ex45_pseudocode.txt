@@ -1,0 +1,8 @@
+Ask user for name of output file
+Use fileIO to create output file
+Use fileIO to load input file
+Use filereader and buffer reader to read text contained in input file
+Loop through each line in input and read to temp string
+use string replace method to change utilize to use in each line
+write temp string to output file using filewriter
+close output file

@@ -8,4 +8,6 @@ class App {
     +void main()
 }
 
+App *- nameSorter
+
 @enduml

@@ -1,0 +1,11 @@
+@startuml
+class App {
+    +void main()
+}
+
+class wordFinder{
+    +void replaceWord(String word1, String word2, File readFile, File writeFile)
+}
+
+App *- wordFinder
+@enduml

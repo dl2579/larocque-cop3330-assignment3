@@ -1,0 +1,21 @@
+This program will parse data from a text field.
+
+    Create a class that has fields for first name, last name and salary since this is the format of each line of the input text file
+    Class contains an Employee array which is an arrayList of Employee objects
+    recordProcessor(File): Constructor will take in a file as parameter
+    Loop through each line of the file and read the line as a string:
+        Convert the string to an array of words using  string split method
+        Create Employee object
+        first element of the array is stored in the last name field of employee
+        second element of the array is stored in the first name field of employee
+        third element of the array is stored in the salary field of employee
+        add employee to employee array
+    Use string format to create a Table string with table headings
+    Loop through employee array for each employee in array:
+        Table += string.format() method to add field of employee in tabular format to string
+    return Table
+
+    Use FileIO and directory of input file to create file object.
+    recordProcessor(File)
+    string output = getRecordTable()
+    print output to console

@@ -1,11 +1,19 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+class App {
+    +void main()
+}
 
-autonumber
+class product{
+    +name : String
+    +price : double
+    +quantity : int
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class productInventory {
+    +products: product
+    +String inventorySearch(String prodName)
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+App *- productInventory
+App *- product
 @enduml

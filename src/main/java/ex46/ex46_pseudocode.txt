@@ -1,0 +1,10 @@
+Use FileIO to read input file
+Create a TreeMap with String as the key and integer(frequency) as the value
+Read each line from input file and put into string array of words
+for each element of the string array, if the tree map does not contain the string, write it to the tree map with a frequency of 1
+    else increment the integer (value) by 1
+Find entry with max frequency by looping through all entries and comparing the value of the entries
+Use for loops to add stars to output string for frequency value of max entry
+Print max entry key and output stars
+remove max entry from tree map
+repeat until no entries left in tree map
